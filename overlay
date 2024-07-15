@@ -29,7 +29,7 @@
 </head>
 <body>
    <div class="overlay-container" onclick="overlayFun()">
-      window.open(url);
+      window.open(https://altenarmchetcuti.github.io/testing/index);
    </div>
    <div style="padding:20px">
    <button class="overlay-button" onclick="overlayFun()">Click on Button</button>

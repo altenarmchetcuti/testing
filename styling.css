@@ -1,3 +1,19 @@
+/* ========= Frank's Front-End Fun Fridays =============
+/* =============== Sept 4, 2020 Edition ================
+/* =============== Revised: October 23 ================
+/*
+    This snippet of CSS can be added to a Salesforce Experience theme to 
+    override and restyle an embedded Flow. Keep in mind that this CSS may not work
+    indefinitely if specific class names in the core product are changed in the future.
+    Be sure to use the out-of-the-box config tools that make
+    Experience Cloud so great whenever you can! And let it be said, Flows
+    will pick up some of the brand colors and styles you add automagically!
+    If you have any feature requests or ideas to make this better, hit me up
+    at fcaron@salesforce.com!
+    Cheers!
+*/
+
+/* Generically style the text for a flow */
 .flowRuntimeV2 span {
     font-family: Roboto;
     font-size: 0.5em;   /* Relative to the font-size of the element (2em means 2 times the size of the current font). */ 
@@ -8,4 +24,120 @@
     font-family: Roboto;
     font-size: 3em;
     font-weight: bold;
+}
+
+/* Added A Border To Any Images In A Text Field */
+.flowRuntimeV2 .uiOutputRichText img {
+    border: 2px solid #FFFFFF
+;
+}
+
+/* Override the button's default branding. Note that this can also be configured and inherits from the Brand settings in the Community.  */
+.flowRuntimeV2 .slds-button_brand {
+    font-family: Roboto;
+    font-size: 1.5em;
+    font-weight: bold;
+    
+    background-color: #440000;  /* This bit controls... yup, the color of the button. */ 
+    padding: 1em;               /* This bit controls the uniform width and height of the button. */ 
+    padding-left: 1em;          /* This bit controls the horizontal size of the button left of the label. */ 
+    padding-right: 1em;         /* This bit controls the horizontal size of the button right of the label. */ 
+}
+
+/* Override the default label style above an input field.  */
+.flowRuntimeV2 .slds-form-element__label, .flowRuntimeV2 .flowruntimeRichTextWrapper {
+    font-family: Roboto;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* Remove the border from around the flow. */
+.flowRuntimeForFlexipage, .forceCommunityFlowCommunity {
+    border: none !important;
+}
+
+/* Change the label for a flow value in a rich text component */
+.flowruntimeRichTextWrapper .uiOutputRichText {
+    font-family: Open Sans;
+}
+
+/* NBA Styling */
+.cNextBestActionsFSC .slds-card__header {
+    display: none;
+}
+
+/* Checkbox Spacing */
+.flowruntimeToggle .slds-checkbox_faux_container { 
+    position: absolute;
+    top: 35px;
+}
+
+.flowruntimeToggle .slds-checkbox_toggle { 
+    margin-bottom: 40px;
+}
+
+/* Flow Page Label Text */
+.flowruntimeToggle .slds-form-element__label, .flowruntimeRichTextWrapper .uiOutputRichText, .flowruntimeSlider .slds-slider-label__label {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.flowruntimeSlider .slds-slider-label__range {
+    display: none;
+}
+
+.flowruntimeSlider .slds-slider {
+    width: 80%;
+}
+
+/* Flow Slider */
+.flowruntimeSlider input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  cursor: pointer;
+  margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #000000; /* Add cool effects to your sliders! */
+}
+.flowruntimeSlider input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: rgb(65, 32, 124);
+}
+
+.flowruntimeSlider input[type=range]:focus::-webkit-slider-runnable-track {
+}
+
+/* ==== Make Tweaks To The Unofficial SF NBA Card Element For Flow ==== */
+
+/* Adjust images for the recommendations */
+.runtime_communities_nbaNbaCard .nbaImage {
+    height: 150px !important;
+    border-radius: 0 !important;
+    
+}
+
+/* Tweak the box of the card */
+.runtime_communities_nbaNbaCard .slds-box {
+    border-radius: none;
+}
+
+/* Make the images bigger */
+.runtime_communities_nbaNbaCard .nbaDescription {
+    min-height: 120px !important;
+    height: 120px !important;
+    max-height: 120px !important;
+}
+
+/* Remove the ellipses of the text description */
+.runtime_communities_nbaNbaCard .nbaDescription .test-propositionDescription {
+    overflow: visible;
+    display: block;
+    font-size: 15px;
+    line-height: 1.4em;
+    color: black;
 }

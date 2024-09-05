@@ -14,7 +14,7 @@
 */
 
 .flowRuntimeV2 .slds-card{
-  background:var(--slds-c-card-color-background, var(--sds-c-card-color-background, var(--slds-g-color-neutral-base-100, #fff)));
+  background:var(--slds-c-card-color-background, var(--sds-c-card-color-background, var(--slds-g-color-neutral-base-15:#242424)));
 }
 /* Generically style the text for a flow */
 .flowRuntimeV2 span {

@@ -13,7 +13,7 @@
     Cheers!
 */
 
-.slds-scope .slds-card{
+.flowRuntimeV2 .slds-card{
   background:var(--slds-c-card-color-background, var(--sds-c-card-color-background, var(--slds-g-color-neutral-base-15:#242424)));
   background-clip:padding-box;
   border-color:var(--slds-c-card-color-border, var(--sds-c-card-color-border, var(--slds-g-color-border-base-1, #c9c9c9)));

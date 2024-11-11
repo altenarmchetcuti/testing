@@ -145,3 +145,40 @@
     line-height: 1.4em;
     color: black;
 }
+
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.day {
+    background-color: #f3f4f6;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.day-title {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.time-slots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.slot {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.slot.selected {
+    background-color: #cce5ff;
+    border-color: #007bff;
+}
+

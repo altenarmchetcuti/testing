@@ -1,0 +1,16 @@
+<template>
+    <div class="calendar-container">
+        <template for:each={days} for:item="day">
+            <div class="day" data-id={day.date}>
+                <h3 class="day-title">{day.date}</h3>
+                <ul class="time-slots">
+                    <template for:each={day.availableSlots} for:item="slot">
+                        <li class="slot" data-slot={slot} onclick={handleSlotClick}>
+                            {slot}
+                        </li>
+                    </template>
+                </ul>
+            </div>
+        </template>
+    </div>
+</template>
